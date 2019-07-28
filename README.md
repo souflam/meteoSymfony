@@ -1,6 +1,6 @@
 # Meteo Symfony 4
 Encapsulation de consomation d'un web service yahoo weather dans graphql en utilisant symfony 4 et en servant de docker.
-#demo
+# demo
 api: http://ec2-3-17-25-37.us-east-2.compute.amazonaws.com/graphiql
 fronend: http://meteographql.surge.sh/
 
