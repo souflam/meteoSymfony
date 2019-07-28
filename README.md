@@ -1,6 +1,12 @@
 # Meteo Symfony 4
 Encapsulation de consomation d'un web service yahoo weather dans graphql en utilisant symfony 4 et en servant de docker.
-##### Les taches:
+#demo
+api: http://ec2-3-17-25-37.us-east-2.compute.amazonaws.com/graphiql
+fronend: http://meteographql.surge.sh/
+
+installation a été faite sur aws EC2 via docker.
+N.B: le projet doit etre encore améliorer pour gérer les erreurs coté api et fronend.
+# Les taches:
 1. ~~mplemente the microservice using Symfony 4~~
 2. ~~Expose the API endpoint with GraphQL.~~
 3. ~~Input: City Output: One day weather prediction~~
@@ -42,5 +48,13 @@ pour tester le projet merci d'accéder sur cette page "http://symfony.localhost/
 3. Une fois l'info est récupereé "Guzzle cache" stock l'info récuperer durant 60 min pour s'en servir pour les prochaines request et comme ça on peut bénificier de 2 choses:
 	-Reduire le nombre des requetes envoyé a yahoo pour ne pas gaspiller le quota dédié à notre compte.
 	garantir que notre service marche bien même si le service yahoo aura une coupure pendant un temps donné
+
+## Troubleshooting
+installer composer et php 7.2 sur votre hebergeur pour installer les composants de symfony.
+les extensions qui doivent etre installé xml et ext-string:
+sudo apt-get install php7.2-xml
+sudo apt install php7.2-mbstring
+activer le swap pour éviter les problemes de l'espace:
+
 
 
