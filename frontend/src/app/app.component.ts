@@ -8,32 +8,36 @@ import gql from 'graphql-tag';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  rates: any[];
+  meteo: any;
   loading = true;
   error: any;
 
   constructor(private apollo: Apollo) {}
-
+  ville = 'Rabat';
   ngOnInit() {
+    this.getMeteo(this.ville);
+  }
+
+  getMeteo(ville) {
     this.apollo
-      .watchQuery({
-        query: gql`
+    .watchQuery({
+      query: gql`
+        {
+          meteo(ville: "${this.ville}")
           {
-            meteo(ville: "rabat")
-            {
-              textMeteo,
-              minTemperature,
-              maxTemperature,
-              ville
-            }
+            textMeteo,
+            minTemperature,
+            maxTemperature,
+            ville
           }
-        `,
-      })
-      .valueChanges.subscribe(result => {
-        console.log(result);
-        //this.rates = result.data && result.data.rates;
-        this.loading = result.loading;
-        //this.error = result.error;
-      });
+        }
+      `,
+    })
+    .valueChanges.subscribe(result => {
+      console.log(result.data);
+      this.meteo = result.data;
+      this.loading = result.loading;
+      //this.error = result.error;
+    });
   }
 }
