@@ -1,5 +1,14 @@
 # Meteo Symfony 4
 Encapsulation de consomation d'un web service yahoo weather dans graphql en utilisant symfony 4 et en servant de docker.
+##### Les taches:
+1. ~~mplemente the microservice using Symfony 4~~
+2. ~~Expose the API endpoint with GraphQL.~~
+3. ~~Input: City Output: One day weather prediction~~
+4. ~~Use Yahoo Weather API https://developer.yahoo.com/weather/~~
+5. ~~Use of Git in your versioning is mandatory.~~
+6. ~~Bonus: use docker.~~
+7. ~~Bonus: cache the weather API results.~~
+8. ~~Bonus: markdown installation guideline.~~
 ## installation
 premierement telecharger le contenu de repository sur votre machine local
 
@@ -33,3 +42,5 @@ pour tester le projet merci d'accéder sur cette page "http://symfony.localhost/
 3. Une fois l'info est récupereé "Guzzle cache" stock l'info récuperer durant 60 min pour s'en servir pour les prochaines request et comme ça on peut bénificier de 2 choses:
 	-Reduire le nombre des requetes envoyé a yahoo pour ne pas gaspiller le quota dédié à notre compte.
 	garantir que notre service marche bien même si le service yahoo aura une coupure pendant un temps donné
+
+
