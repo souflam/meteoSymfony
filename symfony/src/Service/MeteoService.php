@@ -28,8 +28,8 @@ class MeteoService {
 
         $url = 'https://weather-ydn-yql.media.yahoo.com/forecastrss';
         $app_id = 'X7f3bM32';
-        $consumer_key = 'dj0yJmk9bkpWSnZwRUJ4WkZYJmQ9WVdrOVdEZG1NMkpOTXpJbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTU4';
-        $consumer_secret = '9da097409a08c82c8e4ed93958acb95896881c91';
+        $consumer_key = '';
+        $consumer_secret = '';
         $uniq_id = uniqid(mt_rand(1, 1000));
         $time = time();
 
